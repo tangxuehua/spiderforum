@@ -1,0 +1,1 @@
+<%@ Page Language="C#" Inherits="Forum.Business.LogoutPage, Forum.Business" %>

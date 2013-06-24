@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ORMapping>
+    <tables>
+        <table name="tb_Members">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="MemberId" type="uniqueidentifier" typeEnum="UniqueIdentifier" size="16" />
+            <field name="MemberName" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="Password" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="PasswordFormat" type="int" typeEnum="Int" size="4" />
+            <field name="PasswordSalt" type="varchar(128)" typeEnum="VarChar" size="128" />
+        </table>
+        <table name="tb_ExceptionLogs">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="Message" type="varchar(512)" typeEnum="VarChar" size="512" />
+            <field name="ExceptionDetails" type="varchar(2000)" typeEnum="VarChar" size="2000" />
+            <field name="IPAddress" type="varchar(15)" typeEnum="VarChar" size="15" />
+            <field name="UserAgent" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="HttpReferrer" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="HttpVerb" type="varchar(50)" typeEnum="VarChar" size="50" />
+            <field name="PathAndQuery" type="varchar(512)" typeEnum="VarChar" size="512" />
+            <field name="DateCreated" type="datetime" typeEnum="DateTime" size="8" />
+            <field name="DateLastOccurred" type="datetime" typeEnum="DateTime" size="8" />
+            <field name="Frequency" type="int" typeEnum="Int" size="4" />
+            <field name="UserName" type="varchar(64)" typeEnum="VarChar" size="64" />
+        </table>
+        <table name="tb_Users">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="MemberId" type="uniqueidentifier" typeEnum="UniqueIdentifier" size="16" />
+            <field name="NickName" type="varchar(64)" typeEnum="VarChar" size="64" />
+            <field name="AvatarFileName" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="AvatarContent" type="image" typeEnum="Image" size="16" />
+            <field name="UserStatus" type="int" typeEnum="Int" size="4" />
+            <field name="TotalMarks" type="int" typeEnum="Int" size="4" />
+            <field name="Language" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="SiteTheme" type="varchar(128)" typeEnum="VarChar" size="128" />
+        </table>
+        <table name="tb_Roles">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="Name" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="Description" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="RoleType" type="bigint" typeEnum="BigInt" size="8" />
+        </table>
+        <table name="tb_UserRoles">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="UserId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleId" type="int" typeEnum="Int" size="4" />
+        </table>
+        <table name="tb_Permissions">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="RoleId" type="int" typeEnum="Int" size="4" />
+            <field name="AllowMask" type="bigint" typeEnum="BigInt" size="8" />
+            <field name="DenyMask" type="bigint" typeEnum="BigInt" size="8" />
+        </table>
+        <table name="vw_RoleUsers">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" />
+            <field name="UserId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleName" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="RoleDescription" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="RoleType" type="bigint" typeEnum="BigInt" size="8" />
+            <field name="MemberId" type="uniqueidentifier" typeEnum="UniqueIdentifier" size="16" />
+            <field name="NickName" type="varchar(64)" typeEnum="VarChar" size="64" />
+            <field name="AvatarFileName" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="AvatarContent" type="image" typeEnum="Image" size="16" />
+            <field name="UserStatus" type="int" typeEnum="Int" size="4" />
+            <field name="TotalMarks" type="int" typeEnum="Int" size="4" />
+            <field name="Language" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="SiteTheme" type="varchar(128)" typeEnum="VarChar" size="128" />
+        </table>
+        <table name="vw_UserPermissions">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" />
+            <field name="UserId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleId" type="int" typeEnum="Int" size="4" />
+            <field name="PermissionId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleName" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="RoleDescription" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="RoleType" type="bigint" typeEnum="BigInt" size="8" />
+            <field name="AllowMask" type="bigint" typeEnum="BigInt" size="8" />
+            <field name="DenyMask" type="bigint" typeEnum="BigInt" size="8" />
+        </table>
+        <table name="vw_RolePermissions">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleName" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="RoleDescription" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="RoleType" type="bigint" typeEnum="BigInt" size="8" />
+            <field name="PermissionId" type="int" typeEnum="Int" size="4" />
+            <field name="AllowMask" type="bigint" typeEnum="BigInt" size="8" />
+            <field name="DenyMask" type="bigint" typeEnum="BigInt" size="8" />
+        </table>
+
+        <table name="tb_Groups">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="Subject" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="Enabled" type="int" typeEnum="Int" size="4" />
+        </table>
+        <table name="tb_Sections">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="Subject" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="Enabled" type="int" typeEnum="Int" size="1" />
+            <field name="GroupId" type="int" typeEnum="Int" size="4" />
+            <field name="TotalThreads" type="int" typeEnum="Int" size="4" />
+        </table>
+        <table name="tb_Threads">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="Subject" type="varchar(256)" typeEnum="VarChar" size="256" />
+            <field name="Body" type="ntext" typeEnum="NText" size="16" />
+            <field name="CreateDate" type="datetime" typeEnum="DateTime" size="8" />
+            <field name="UpdateDate" type="datetime" typeEnum="DateTime" size="8" />
+            <field name="StickDate" type="datetime" typeEnum="DateTime" size="8" />
+            <field name="AuthorId" type="int" typeEnum="Int" size="4" />
+            <field name="Author" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="GroupId" type="int" typeEnum="Int" size="4" />
+            <field name="SectionId" type="int" typeEnum="Int" size="4" />
+            <field name="TotalPosts" type="int" typeEnum="Int" size="4" />
+            <field name="TotalViews" type="int" typeEnum="Int" size="4" />
+            <field name="ThreadStatus" type="int" typeEnum="Int" size="4" />
+            <field name="MostRecentReplierId" type="int" typeEnum="Int" size="4" />
+            <field name="MostRecentReplierName" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="ThreadMarks" type="int" typeEnum="Int" size="4" />
+            <field name="ThreadReleaseStatus" type="int" typeEnum="Int" size="4" />
+        </table>
+        <table name="tb_Posts">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="Body" type="ntext" typeEnum="NText" size="16" />
+            <field name="GroupId" type="int" typeEnum="Int" size="4" />
+            <field name="SectionId" type="int" typeEnum="Int" size="4" />
+            <field name="ThreadId" type="int" typeEnum="Int" size="4" />
+            <field name="AuthorId" type="int" typeEnum="Int" size="4" />
+            <field name="CreateDate" type="datetime" typeEnum="DateTime" size="8" />
+        </table>
+        <table name="vw_PostWithUser">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" />
+            <field name="Body" type="ntext" typeEnum="NText" size="16" />
+            <field name="GroupId" type="int" typeEnum="Int" size="4" />
+            <field name="SectionId" type="int" typeEnum="Int" size="4" />
+            <field name="ThreadId" type="int" typeEnum="Int" size="4" />
+            <field name="AuthorId" type="int" typeEnum="Int" size="4" />
+            <field name="CreateDate" type="datetime" typeEnum="DateTime" size="8" />
+            <field name="MemberId" type="uniqueidentifier" typeEnum="UniqueIdentifier" size="16" />
+            <field name="NickName" type="varchar(64)" typeEnum="VarChar" size="64" />
+            <field name="AvatarFileName" type="varchar(128)" typeEnum="VarChar" size="128" />
+            <field name="TotalMarks" type="int" typeEnum="Int" size="4" />
+        </table>
+        <table name="tb_SectionRoleUsers">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" isIdentity="true" />
+            <field name="SectionId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleId" type="int" typeEnum="Int" size="4" />
+            <field name="UserId" type="int" typeEnum="Int" size="4" />
+        </table>
+        <table name="vw_SectionRoleUsers">
+            <field name="EntityId" type="int" typeEnum="Int" size="4" />
+            <field name="SectionId" type="int" typeEnum="Int" size="4" />
+            <field name="RoleId" type="int" typeEnum="Int" size="4" />
+            <field name="UserId" type="int" typeEnum="Int" size="4" />
+            <field name="MemberId" type="uniqueidentifier" typeEnum="UniqueIdentifier" size="16" />
+            <field name="NickName" type="varchar(64)" typeEnum="VarChar" size="64" />
+        </table>
+    </tables>
+    <entityMappings>
+        <entityMapping entityType="System.Web.Core.Member, System.Web.Core" tableName="tb_Members">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="MemberId" fieldName="MemberId" />
+            <propertyNode propertyName="MemberName" fieldName="MemberName" />
+            <propertyNode propertyName="Password" fieldName="Password" />
+            <propertyNode propertyName="PasswordFormat" fieldName="PasswordFormat" />
+            <propertyNode propertyName="PasswordSalt" fieldName="PasswordSalt" />
+        </entityMapping>
+        <entityMapping entityType="System.Web.Core.ExceptionLog, System.Web.Core" tableName="tb_ExceptionLogs">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Message" fieldName="Message" />
+            <propertyNode propertyName="ExceptionDetails" fieldName="ExceptionDetails" />
+            <propertyNode propertyName="IPAddress" fieldName="IPAddress" />
+            <propertyNode propertyName="UserAgent" fieldName="UserAgent" />
+            <propertyNode propertyName="HttpReferrer" fieldName="HttpReferrer" />
+            <propertyNode propertyName="HttpVerb" fieldName="HttpVerb" />
+            <propertyNode propertyName="PathAndQuery" fieldName="PathAndQuery" />
+            <propertyNode propertyName="DateCreated" fieldName="DateCreated" />
+            <propertyNode propertyName="DateLastOccurred" fieldName="DateLastOccurred" />
+            <propertyNode propertyName="Frequency" fieldName="Frequency" />
+            <propertyNode propertyName="UserName" fieldName="UserName" />
+        </entityMapping>
+        <entityMapping entityType="Forum.Business.ForumUser, Forum.Business" tableName="tb_Users">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="MemberId" fieldName="MemberId" />
+            <propertyNode propertyName="NickName" fieldName="NickName" />
+            <propertyNode propertyName="AvatarFileName" fieldName="AvatarFileName" />
+            <propertyNode propertyName="AvatarContent" fieldName="AvatarContent" />
+            <propertyNode propertyName="UserStatus" fieldName="UserStatus" />
+            <propertyNode propertyName="TotalMarks" fieldName="TotalMarks" />
+            <propertyNode propertyName="Language" fieldName="Language" />
+            <propertyNode propertyName="SiteTheme" fieldName="SiteTheme" />
+        </entityMapping>
+        <entityMapping entityType="System.Web.Core.Role, System.Web.Core" tableName="tb_Roles">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Name" fieldName="Name" />
+            <propertyNode propertyName="Description" fieldName="Description" />
+            <propertyNode propertyName="RoleType" fieldName="RoleType" />
+        </entityMapping>
+        <entityMapping entityType="System.Web.Core.Permission, System.Web.Core" tableName="tb_Permissions">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="RoleId" fieldName="RoleId" />
+            <propertyNode propertyName="AllowMask" fieldName="AllowMask" />
+            <propertyNode propertyName="DenyMask" fieldName="DenyMask" />
+        </entityMapping>
+        <entityMapping entityType="System.Web.Core.UserRole, System.Web.Core" tableName="tb_UserRoles">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="UserId" fieldName="UserId" />
+            <propertyNode propertyName="RoleId" fieldName="RoleId" />
+        </entityMapping>
+        <entityMapping entityType="System.Web.Core.RolePermission, System.Web.Core" tableName="vw_RolePermissions">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Role">
+                <propertyNode propertyName="EntityId" fieldName="RoleId" />
+                <propertyNode propertyName="Name" fieldName="RoleName" />
+                <propertyNode propertyName="Description" fieldName="RoleDescription" />
+                <propertyNode propertyName="RoleType" fieldName="RoleType" />
+            </propertyNode>
+            <propertyNode propertyName="Permission">
+                <propertyNode propertyName="EntityId" fieldName="PermissionId" />
+                <propertyNode propertyName="RoleId" fieldName="RoleId" />
+                <propertyNode propertyName="AllowMask" fieldName="AllowMask" />
+                <propertyNode propertyName="DenyMask" fieldName="DenyMask" />
+            </propertyNode>
+        </entityMapping>
+        <entityMapping entityType="System.Web.Core.UserPermission, System.Web.Core" tableName="vw_UserPermissions">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="User">
+                <propertyNode propertyName="EntityId" fieldName="UserId" />
+            </propertyNode>
+            <propertyNode propertyName="RolePermission">
+                <propertyNode propertyName="EntityId" fieldName="RoleId" />
+                <propertyNode propertyName="Role">
+                    <propertyNode propertyName="EntityId" fieldName="RoleId" />
+                    <propertyNode propertyName="Name" fieldName="RoleName" />
+                    <propertyNode propertyName="Description" fieldName="RoleDescription" />
+                    <propertyNode propertyName="RoleType" fieldName="RoleType" />
+                </propertyNode>
+                <propertyNode propertyName="Permission">
+                    <propertyNode propertyName="EntityId" fieldName="PermissionId" />
+                    <propertyNode propertyName="RoleId" fieldName="RoleId" />
+                    <propertyNode propertyName="AllowMask" fieldName="AllowMask" />
+                    <propertyNode propertyName="DenyMask" fieldName="DenyMask" />
+                </propertyNode>
+            </propertyNode>
+        </entityMapping>
+        <entityMapping entityType="System.Web.Core.UserAndRole, System.Web.Core" tableName="vw_RoleUsers">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="User">
+                <propertyNode propertyName="EntityId" fieldName="UserId" />
+                <propertyNode propertyName="MemberId" fieldName="MemberId" />
+                <propertyNode propertyName="NickName" fieldName="NickName" />
+                <propertyNode propertyName="AvatarFileName" fieldName="AvatarFileName" />
+                <propertyNode propertyName="AvatarContent" fieldName="AvatarContent" />
+                <propertyNode propertyName="UserStatus" fieldName="UserStatus" />
+                <propertyNode propertyName="TotalMarks" fieldName="TotalMarks" />
+                <propertyNode propertyName="Language" fieldName="Language" />
+                <propertyNode propertyName="SiteTheme" fieldName="SiteTheme" />
+            </propertyNode>
+            <propertyNode propertyName="Role">
+                <propertyNode propertyName="EntityId" fieldName="RoleId" />
+                <propertyNode propertyName="Name" fieldName="RoleName" />
+                <propertyNode propertyName="Description" fieldName="RoleDescription" />
+                <propertyNode propertyName="RoleType" fieldName="RoleType" />
+            </propertyNode>
+        </entityMapping>
+
+        <entityMapping entityType="Forum.Business.Group, Forum.Business" tableName="tb_Groups">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Subject" fieldName="Subject" />
+            <propertyNode propertyName="Enabled" fieldName="Enabled" />
+        </entityMapping>
+        <entityMapping entityType="Forum.Business.Section, Forum.Business" tableName="tb_Sections">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Subject" fieldName="Subject" />
+            <propertyNode propertyName="Enabled" fieldName="Enabled" />
+            <propertyNode propertyName="GroupId" fieldName="GroupId" />
+            <propertyNode propertyName="TotalThreads" fieldName="TotalThreads" />
+        </entityMapping>
+        <entityMapping entityType="Forum.Business.SectionRoleUser, Forum.Business" tableName="tb_SectionRoleUsers">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="SectionId" fieldName="SectionId" />
+            <propertyNode propertyName="RoleId" fieldName="RoleId" />
+            <propertyNode propertyName="UserId" fieldName="UserId" />
+        </entityMapping>
+        <entityMapping entityType="Forum.Business.SectionRoleAndUser, Forum.Business" tableName="vw_SectionRoleUsers">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="SectionRoleUser">
+                <propertyNode propertyName="EntityId" fieldName="EntityId" />
+                <propertyNode propertyName="SectionId" fieldName="SectionId" />
+                <propertyNode propertyName="RoleId" fieldName="RoleId" />
+                <propertyNode propertyName="UserId" fieldName="UserId" />
+            </propertyNode>
+            <propertyNode propertyName="User">
+                <propertyNode propertyName="EntityId" fieldName="UserId" />
+                <propertyNode propertyName="MemberId" fieldName="MemberId" />
+                <propertyNode propertyName="NickName" fieldName="NickName" />
+            </propertyNode>
+        </entityMapping>
+        <entityMapping entityType="Forum.Business.Thread, Forum.Business" tableName="tb_Threads">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Subject" fieldName="Subject" />
+            <propertyNode propertyName="Body" fieldName="Body" />
+            <propertyNode propertyName="CreateDate" fieldName="CreateDate" />
+            <propertyNode propertyName="UpdateDate" fieldName="UpdateDate" />
+            <propertyNode propertyName="StickDate" fieldName="StickDate" />
+            <propertyNode propertyName="AuthorId" fieldName="AuthorId" />
+            <propertyNode propertyName="Author" fieldName="Author" />
+            <propertyNode propertyName="GroupId" fieldName="GroupId" />
+            <propertyNode propertyName="SectionId" fieldName="SectionId" />
+            <propertyNode propertyName="TotalPosts" fieldName="TotalPosts" />
+            <propertyNode propertyName="TotalViews" fieldName="TotalViews" />
+            <propertyNode propertyName="ThreadStatus" fieldName="ThreadStatus" />
+            <propertyNode propertyName="MostRecentReplierId" fieldName="MostRecentReplierId" />
+            <propertyNode propertyName="MostRecentReplierName" fieldName="MostRecentReplierName"  />
+            <propertyNode propertyName="ThreadMarks" fieldName="ThreadMarks" />
+            <propertyNode propertyName="ThreadReleaseStatus" fieldName="ThreadReleaseStatus" />
+        </entityMapping>
+        <entityMapping entityType="Forum.Business.Post, Forum.Business" tableName="tb_Posts">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Body" fieldName="Body" />
+            <propertyNode propertyName="GroupId" fieldName="GroupId" />
+            <propertyNode propertyName="SectionId" fieldName="SectionId" />
+            <propertyNode propertyName="ThreadId" fieldName="ThreadId" />
+            <propertyNode propertyName="AuthorId" fieldName="AuthorId" />
+            <propertyNode propertyName="CreateDate" fieldName="CreateDate" />
+        </entityMapping>
+        <entityMapping entityType="Forum.Business.PostAndUser, Forum.Business" tableName="vw_PostWithUser">
+            <propertyNode propertyName="EntityId" fieldName="EntityId" />
+            <propertyNode propertyName="Post">
+                <propertyNode propertyName="EntityId" fieldName="EntityId" />
+                <propertyNode propertyName="Body" fieldName="Body" />
+                <propertyNode propertyName="GroupId" fieldName="GroupId" />
+                <propertyNode propertyName="SectionId" fieldName="SectionId" />
+                <propertyNode propertyName="ThreadId" fieldName="ThreadId" />
+                <propertyNode propertyName="AuthorId" fieldName="AuthorId" />
+                <propertyNode propertyName="CreateDate" fieldName="CreateDate" />
+            </propertyNode>
+            <propertyNode propertyName="User">
+                <propertyNode propertyName="EntityId" fieldName="AuthorId" />
+                <propertyNode propertyName="MemberId" fieldName="MemberId" />
+                <propertyNode propertyName="NickName" fieldName="NickName" />
+                <propertyNode propertyName="AvatarFileName" fieldName="AvatarFileName" />
+                <propertyNode propertyName="TotalMarks" fieldName="TotalMarks" />
+            </propertyNode>
+        </entityMapping>
+    </entityMappings>
+    <commands>
+        <command commandId="GetThreads" commandName="sp_GetThreads">
+            <parameters>
+                <parameter propertyName="Data">
+                    <parameter propertyName="SectionId" parameterName="@SectionId" dbTypeHint="Int" paramDirection="Input" />
+                    <parameter propertyName="AuthorId" parameterName="@AuthorId" dbTypeHint="Int" paramDirection="Input" />
+                    <parameter propertyName="ThreadStatus" parameterName="@ThreadStatus" dbTypeHint="Int" paramDirection="Input" />
+                    <parameter propertyName="ThreadReleaseStatus" parameterName="@ThreadReleaseStatus" dbTypeHint="Int" paramDirection="Input" />
+                </parameter>
+                <parameter propertyName="ReplierId" parameterName="@ReplierId" dbTypeHint="Int" paramDirection="Input" />
+                <parameter propertyName="OrderField" parameterName="@OrderField" dbTypeHint="Int" paramDirection="Input" />
+                <parameter propertyName="PageIndex" parameterName="@PageIndex" dbTypeHint="Int" paramDirection="Input" />
+                <parameter propertyName="PageSize" parameterName="@PageSize" dbTypeHint="Int" paramDirection="Input" />
+                <parameter propertyName="TotalRecords" parameterName="@TotalRecords" dbTypeHint="Int" paramDirection="Output" />
+            </parameters>
+            <returnEntityCollection>
+                <returnEntity entityType="Forum.Business.Thread, Forum.Business" entityReturnMode="Multiple">
+                    <propertyNode propertyName="EntityId" fieldName="EntityId" />
+                    <propertyNode propertyName="Subject" fieldName="Subject" />
+                    <propertyNode propertyName="CreateDate" fieldName="CreateDate" />
+                    <propertyNode propertyName="UpdateDate" fieldName="UpdateDate" />
+                    <propertyNode propertyName="StickDate" fieldName="StickDate" />
+                    <propertyNode propertyName="AuthorId" fieldName="AuthorId" />
+                    <propertyNode propertyName="Author" fieldName="Author" />
+                    <propertyNode propertyName="GroupId" fieldName="GroupId" />
+                    <propertyNode propertyName="SectionId" fieldName="SectionId" />
+                    <propertyNode propertyName="TotalPosts" fieldName="TotalPosts" />
+                    <propertyNode propertyName="TotalViews" fieldName="TotalViews" />
+                    <propertyNode propertyName="ThreadStatus" fieldName="ThreadStatus" />
+                    <propertyNode propertyName="MostRecentReplierId" fieldName="MostRecentReplierId" />
+                    <propertyNode propertyName="MostRecentReplierName" fieldName="MostRecentReplierName" />
+                    <propertyNode propertyName="ThreadMarks" fieldName="ThreadMarks" />
+                    <propertyNode propertyName="ThreadReleaseStatus" fieldName="ThreadReleaseStatus" />
+                </returnEntity>
+            </returnEntityCollection>
+        </command>
+    </commands>
+</ORMapping>

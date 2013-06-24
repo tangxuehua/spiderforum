@@ -1,0 +1,311 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{234D6C15-1366-446A-AF8F-17DA7D860ECE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Web.Core</RootNamespace>
+    <AssemblyName>System.Web.Core</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>http://localhost/NetFocus.Web.Core/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary, Version=3.1.3524.16873, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserRolePermissions\AccessControlEntry.cs" />
+    <Compile Include="UserRolePermissions\Role.cs" />
+    <Compile Include="UserRolePermissions\Permission.cs" />
+    <Compile Include="UserRolePermissions\RolePermissionManager.cs" />
+    <Compile Include="UserRolePermissions\RoleManager.cs" />
+    <Compile Include="Providers\EntityProvider.cs" />
+    <Compile Include="Components\UrlReWrite\Location.cs" />
+    <Compile Include="Components\UrlReWrite\LocationSet.cs" />
+    <Compile Include="Providers\ProviderData.cs" />
+    <Compile Include="Components\Common\Configuration.cs" />
+    <Compile Include="DataEngine\Entity.cs" />
+    <Compile Include="DataEngine\EntityList.cs" />
+    <Compile Include="Components\UrlReWrite\ReWrittenUrl.cs" />
+    <Compile Include="Components\Common\SerializerData.cs" />
+    <Compile Include="Components\Common\ConfigurationSectionHandler.cs" />
+    <Compile Include="DataEngine\OrderFields.cs" />
+    <Compile Include="DataEngine\OrderField.cs" />
+    <Compile Include="Managers\CacheManager.cs" />
+    <Compile Include="DataEngine\DataProcesser.cs" />
+    <Compile Include="Utilities\Globals.cs" />
+    <Compile Include="Providers\SqlProviders\SqlEntityProvider.cs" />
+    <Compile Include="UserRolePermissions\User.cs" />
+    <Compile Include="Managers\CookieManager.cs" />
+    <Compile Include="Providers\ProviderBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Common\ExceptionLog.cs" />
+    <Compile Include="Components\Common\PerformanceTool.cs" />
+    <Compile Include="Controls\BaseBreadCrumb.cs" />
+    <Compile Include="Controls\ValuedCheckBoxList.cs" />
+    <Compile Include="Controls\ValuedRadioButtonList.cs" />
+    <Compile Include="Controls\ValuedRadioButton.cs" />
+    <Compile Include="Controls\NoneStateRepeater.cs" />
+    <Compile Include="Controls\FileUploader.cs" />
+    <Compile Include="Controls\EntityImage.cs" />
+    <Compile Include="DataEngine\Conditions\ICondition\AndCondition.cs" />
+    <Compile Include="DataEngine\Conditions\ICondition\OrCondition.cs" />
+    <Compile Include="DataEngine\Conditions\ICondition\ICondition.cs" />
+    <Compile Include="DataEngine\Conditions\IChildCondition\PropertyCondition.cs" />
+    <Compile Include="DataEngine\Conditions\ICondition\Condition.cs" />
+    <Compile Include="DataEngine\DataTypes.cs" />
+    <Compile Include="DataEngine\DataValidators\IDataValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Int\PositiveNullableIntValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Double\PositiveNullableDoubleValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Double\NullableDoubleValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Int\NotNegativeIntValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\NullableDateTimeValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\StringValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\GuidValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Int\NegativeOrZeroNullableIntValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Double\NegativeOrZeroNullableDoubleValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\NullOrEmptyStringValidator.cs" />
+    <Compile Include="Components\Common\ParameterName.cs" />
+    <Compile Include="Providers\ObjectProviders\UserIdProvider.cs" />
+    <Compile Include="Components\Common\RoleType.cs" />
+    <Compile Include="Components\Common\ICodeHighlighter.cs" />
+    <Compile Include="Providers\ObjectProviders\IObjectsProvider.cs" />
+    <Compile Include="DataEngine\DataValidators\Int\NullableIntValidator.cs" />
+    <Compile Include="DataEngine\Conditions\IChildCondition\IPropertyCondition.cs" />
+    <Compile Include="DataEngine\Conditions\ICondition\IFieldCondition.cs" />
+    <Compile Include="DataEngine\Conditions\IChildCondition\IChildCondition.cs" />
+    <Compile Include="DataEngine\Conditions\IChildCondition\AndChildCondition.cs" />
+    <Compile Include="DataEngine\Conditions\IChildCondition\OrChildCondition.cs" />
+    <Compile Include="Components\Common\ListManageAjaxData.cs" />
+    <Compile Include="DataEngine\DataValidators\DataValidatorHelper.cs" />
+    <Compile Include="DataEngine\DataValidators\Double\PositiveDoubleValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Int\PositiveIntValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\DateTimeValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\ValidatorAttribute.cs" />
+    <Compile Include="DataEngine\DataValidators\Long\NegativeOrZeroNullableLongValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Long\NullableLongValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Long\PositiveLongValidator.cs" />
+    <Compile Include="DataEngine\DataValidators\Long\PositiveNullableLongValidator.cs" />
+    <Compile Include="DataEngine\ORM\EntityListRequestMeteData.cs" />
+    <Compile Include="DataEngine\ORM\PropertyNode.cs" />
+    <Compile Include="DataEngine\ORM\Table.cs" />
+    <Compile Include="DataEngine\ORM\TableField.cs" />
+    <Compile Include="Controls\AjaxPager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpHandlers\AuthCodeHttpHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlPanelNavbar.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CurrentPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Editor\HtmlEditor.cs" />
+    <Compile Include="Controls\Editor\ValuedEditor.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ExpanderPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\HeadControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\IButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpHandlers\ImageHttpHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\IText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Editor\ITextEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\IValuedControl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\NavigationMenu.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Pager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ResourceButton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ResourceLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ResourceLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ResourceLiteral.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Script.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Style.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpHandlers\UserAvatarHttpHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ValuedCheckBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ValuedDropDownList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ValuedTextBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\ValuedHiddenControl.cs" />
+    <Compile Include="DataEngine\EntityReturnMode.cs" />
+    <Compile Include="DataEngine\AttachmentEntity.cs" />
+    <Compile Include="DataEngine\ORM\Command.cs" />
+    <Compile Include="DataEngine\ORM\CommandParameter.cs" />
+    <Compile Include="DataEngine\ORM\EntityMapping.cs" />
+    <Compile Include="DataEngine\Property.cs" />
+    <Compile Include="DataEngine\Conditions\ICondition\FieldCondition.cs" />
+    <Compile Include="DataEngine\ORM\ReturnEntity.cs" />
+    <Compile Include="DataEngine\ExtendedAttributes.cs" />
+    <Compile Include="DataEngine\UpdatePropertyEntry.cs" />
+    <Compile Include="UserRolePermissions\UserPermission.cs" />
+    <Compile Include="UserRolePermissions\UserAvatar.cs" />
+    <Compile Include="DataEngine\Request.cs" />
+    <Compile Include="DataEngine\RequestDependency.cs" />
+    <Compile Include="Managers\SerializeManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataEngine\RequestBinder.cs" />
+    <Compile Include="Components\Common\Global.cs" />
+    <Compile Include="Components\Common\Head.cs" />
+    <Compile Include="Components\Common\HttpModule.cs" />
+    <Compile Include="Components\Common\NavLink.cs" />
+    <Compile Include="Components\Common\SelectedNavigation.cs" />
+    <Compile Include="Components\Common\Tab.cs" />
+    <Compile Include="Components\UrlReWrite\UrlReWriter.cs" />
+    <Compile Include="DataEngine\IRequestBuilder.cs">
+    </Compile>
+    <Compile Include="DataEngine\IReplyConverter.cs">
+    </Compile>
+    <Compile Include="DataEngine\OperationType.cs" />
+    <Compile Include="DataEngine\EntityReply.cs" />
+    <Compile Include="DataEngine\BinderBuilder.cs" />
+    <Compile Include="Components\Jobs\IJob.cs" />
+    <Compile Include="Components\Jobs\Job.cs" />
+    <Compile Include="Managers\JobManager.cs" />
+    <Compile Include="Components\Jobs\UpdateOnlineInfoJob.cs" />
+    <Compile Include="UserRolePermissions\MergedPermission.cs" />
+    <Compile Include="UserRolePermissions\OnlineMember.cs" />
+    <Compile Include="UserRolePermissions\Member.cs" />
+    <Compile Include="Components\Common\BaseSite.cs" />
+    <Compile Include="UserRolePermissions\MemberInfo.cs" />
+    <Compile Include="Managers\AjaxManager.cs" />
+    <Compile Include="Managers\OnlineMemberManager.cs" />
+    <Compile Include="Managers\MemberManager.cs" />
+    <Compile Include="Managers\ResourceManager.cs" />
+    <Compile Include="Managers\UrlManager.cs" />
+    <Compile Include="DataEngine\Engine.cs" />
+    <Compile Include="UserRolePermissions\UserManager.cs" />
+    <Compile Include="Components\Common\ISite.cs" />
+    <Compile Include="Providers\ProviderFactory.cs" />
+    <Compile Include="UserRolePermissions\RolePermission.cs" />
+    <Compile Include="UserRolePermissions\UserRole.cs" />
+    <Compile Include="UserRolePermissions\UserAndRole.cs" />
+    <Compile Include="Utilities\ChineseConvertor.cs" />
+    <Compile Include="Utilities\IpClass.cs" />
+    <Compile Include="Utilities\RegularExpressions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\UrlReWrite\DynamicPath.cs" />
+    <Compile Include="HttpHandlers\StaticFilesHttpHandler.cs" />
+    <Compile Include="HttpHandlers\ImgHttpHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

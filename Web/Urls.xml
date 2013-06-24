@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <navigations>
+        <link name="home" class="navLast" resourceUrl="home" resourceName="Home" roles="所有人" />
+    </navigations>
+    <locations>
+        <location name="themes" path="/themes/" exclude="true" />
+        <location name="controlpanel" path="/controlpanel/" />
+        <location name="utility" path="/utility/" exclude="true"/>
+        <location name="common" path="/" />
+    </locations>
+    <transformers>
+        <add key="^" value="&amp;" />
+        <add key="//" value="/" />
+    </transformers>
+    <dynamicPaths>
+        <add key="siteThemePagePath" pathFormat="themes/{0}/pages/" valueProvider="Forum.Business.UserSiteThemeProvider, Forum.Business" />
+        <add key="siteControlPanelThemePagePath" pathFormat="controlpanelthemes/{0}/pages/" valueProvider="Forum.Business.UserControlPanelThemeProvider, Forum.Business" />
+    </dynamicPaths>
+    <urls>
+        <location name="common">
+            <url name="home" pattern="default.aspx" path="" dynamicpath="siteThemePagePath" realpath="default.aspx" />
+            <url name="register" path="register.aspx" />
+            <url name="login" path="login.aspx" />
+            <url name="loginWithReturnUrl" path="login.aspx?ReturnUrl={0}" />
+            <url name="logout" path="logout.aspx" />
+            <url name="threadview" pattern="threadview.aspx" path="threadview.aspx" dynamicpath="siteThemePagePath" realpath="threadview.aspx" />
+            <url name="sectionthreads" pattern="(\d+)/threads.aspx" path="{0}/threads.aspx" dynamicpath="siteThemePagePath" realpath="default.aspx?sectionid=$1&amp;threadreleasestatus=1&amp;OrderType=0" />
+            <url name="recommendedthreads" pattern="recommended.aspx" path="recommended.aspx" dynamicpath="siteThemePagePath" realpath="default.aspx?threadstatus=2&amp;threadreleasestatus=1&amp;OrderType=0" />
+            <url name="sectionrecommendedthreads" pattern="(\d+)/recommended.aspx" path="{0}/recommended.aspx" dynamicpath="siteThemePagePath" realpath="default.aspx?sectionid=$1&amp;threadstatus=2&amp;threadreleasestatus=1&amp;OrderType=0" />
+            <url name="addthread" pattern="(\d+)/newthread.aspx" path="{0}/newthread.aspx" dynamicpath="siteThemePagePath" realpath="addthread.aspx?sectionid=$1" />
+            <url name="thread" pattern="thread/(\d+).aspx" path="thread/{0}.aspx" dynamicpath="siteThemePagePath" realpath="thread.aspx?threadid=$1" />
+            <url name="closethread" pattern="closethread/(\d+).aspx" path="closethread/{0}.aspx" dynamicpath="siteThemePagePath" realpath="closethread.aspx?threadid=$1" />
+        </location>
+        <location name="controlpanel">
+            <url name="controlpanel" pattern="default.aspx" path="" dynamicpath="siteControlPanelThemePagePath" realpath="default.aspx" />
+            <url name="editprofile" pattern="editprofile.aspx" path="editprofile.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="editprofile.aspx" />
+            <url name="editavatar" pattern="editavatar.aspx" path="editavatar.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="editavatar.aspx" />
+            <url name="changepassword" pattern="changepassword.aspx" path="changepassword.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="changepassword.aspx" />
+            <url name="user_list" pattern="usermanage.aspx" path="usermanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="userlist.aspx" />
+            <url name="userroles" pattern="(\d+)/userrolesmanage.aspx" path="{0}/userrolesmanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="userroles.aspx?userid=$1" />
+            <url name="role_list" pattern="rolemanage.aspx" path="rolemanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="rolelist.aspx" />
+            <url name="role_add" pattern="addrole.aspx" path="addrole.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="roleadd.aspx" />
+            <url name="role_edit" pattern="editrole(\d+).aspx" path="editrole{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="roleedit.aspx?roleid=$1" />
+            <url name="exceptionlog_view" pattern="viewexceptionlog(\d+).aspx" path="viewexceptionlog{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="viewexceptionlog.aspx?exceptionlogid=$1" />
+            <url name="modulepermissionmanage" pattern="mpm.aspx" path="mpm.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="modulepermissionmanage.aspx" />
+            <url name="forumpermissionmanage" pattern="fpm.aspx" path="fpm.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="forumpermissionmanage.aspx" />
+            <url name="exceptionlog_list" pattern="exceptionlogmanage.aspx" path="exceptionlogmanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="exceptionloglist.aspx" />
+            <url name="group_list" pattern="groupmanage.aspx" path="groupmanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="grouplist.aspx" />
+            <url name="group_add" pattern="addgroup.aspx" path="addgroup.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="groupadd.aspx" />
+            <url name="group_edit" pattern="editgroup(\d+).aspx" path="editgroup{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="groupedit.aspx?groupid=$1" />
+            <url name="section_list" pattern="(\d+)/sectionmanage.aspx" path="{0}/sectionmanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="sectionlist.aspx?groupid=$1" />
+            <url name="section_add" pattern="(\d+)/addsection.aspx" path="{0}/addsection.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="sectionadd.aspx?groupid=$1" />
+            <url name="section_edit" pattern="editsection(\d+).aspx" path="editsection{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="sectionedit.aspx?sectionid=$1" />
+            <url name="sectionadmins" pattern="(\d+)/(\d+)/sectionadminmanager.aspx" path="{0}/{1}/sectionadminmanager.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="sectionadmins.aspx?sectionid=$1&amp;roleid=$2" />
+            <url name="mythreadlist" pattern="(\d+)/mythreads.aspx" path="{0}/mythreads.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="mythreadlist.aspx?authorid=$1" />
+            <url name="myreplythreadlist" pattern="(\d+)/myreplythreads.aspx" path="{0}/myreplythreads.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="myreplythreadlist.aspx?replierid=$1" />
+            <url name="myopenthreadlist" pattern="(\d+)/myopenthreadlist.aspx" path="{0}/myopenthreadlist.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="myopenthreadlist.aspx?authorid=$1&amp;threadreleasestatus=1" />
+            <url name="myclosethreadlist" pattern="(\d+)/myclosethreadlist.aspx" path="{0}/myclosethreadlist.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="myclosethreadlist.aspx?authorid=$1&amp;threadreleasestatus=2" />
+            <url name="mythreadedit" pattern="editmythread(\d+).aspx" path="editmythread{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="mythreadedit.aspx?threadid=$1" />
+            <url name="thread_list" pattern="(\d+)/threadmanage.aspx" path="{0}/threadmanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="threadlist.aspx?sectionid=$1" />
+            <url name="thread_add" pattern="(\d+)/addthread.aspx" path="{0}/addthread.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="threadadd.aspx?sectionid=$1" />
+            <url name="thread_edit" pattern="editthread(\d+).aspx" path="editthread{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="threadedit.aspx?threadid=$1" />
+            <url name="post_list" pattern="(\d+)/postmanage.aspx" path="{0}/postmanage.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="postlist.aspx?threadid=$1" />
+            <url name="post_add" pattern="(\d+)/addpost.aspx" path="{0}/addpost.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="postadd.aspx?threadid=$1" />
+            <url name="post_edit" pattern="editpost(\d+).aspx" path="editpost{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="postedit.aspx?postid=$1" />
+            <url name="mypostedit" pattern="editmypost(\d+).aspx" path="editmypost{0}.aspx" dynamicpath="siteControlPanelThemePagePath" realpath="mypostedit.aspx?postid=$1" />
+        </location>
+    </urls>
+</root>

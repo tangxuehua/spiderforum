@@ -1,0 +1,44 @@
+#registerAreaWrapper{width:730px;text-align:center;margin:0 auto}
+.registerwrapper{text-align:left;margin:10px 0;padding:10px}
+.dropdownlist{margin:-1px}
+a:hover{color:#f60;text-decoration:underline}
+BODY{background:#fff url(img.ashx?fileurl=images/loginbg.jpg) top left no-repeat;color:#000;font-size:12px;line-height:20px;text-align:center;font-family:Arial;margin:0}
+IMG{border-width:0}
+.input{border-right:#a4bcd5 1px solid;border-top:#a4bcd5 1px solid;border-left:#a4bcd5 1px solid;width:100px;border-bottom:#a4bcd5 1px solid;height:16px;margin:0 0 3px}
+#main{width:700px;text-align:left;margin:0 auto}
+#logo{margin-left:25px;width:280px;position:absolute;top:24px}
+#zhsh{margin-left:525px;width:248px;position:absolute;top:45px}
+#ht{width:700px;position:relative;top:95px;height:23px;background-color:#367dc6}
+#reg{width:700px;position:absolute;top:120px}
+.btn{border-right:#002d96 1px solid;border-top:#002d96 1px solid;font-size:12px;filter:progid: DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FFFFFF,EndColorStr=#9DBCEA);border-left:#002d96 1px solid;cursor:hand;color:#000;border-bottom:#002d96 1px solid;background-color:#bfefff;padding:2px 2px 0}
+.btn3{width:86px;height:33px;background-image:url(img.ashx?fileurl=images/main-pic.gif);background-repeat:no-repeat;border:0;float:left;margin-left:13px;cursor:pointer!important;display:inline;background-position:-12px -11px}
+.btn3:hover{background-position:-111px -11px}
+TD{font-size:14px}
+.xl{border-bottom:#bebebe 1px dashed}
+.red{color:#f72a25}
+.lan{color:#3f74aa}
+.b{font-weight:bold}
+.f12b{margin-top:10px;}
+.f12b TD{font-weight:400;font-size:14px}
+.f12b TR{height:40px}
+#topSpanRow{height:15px}
+.bd{font-size:14px;color:#3f74aa;height:15px}
+.bd2{font-size:12px;color:#3f74aa}
+.lv{font-size:14px;color:#390}
+.h12{font-weight:400;font-size:12px;color:#909090}
+.reg A{font-size:12px;color:#000}
+.j{margin-top:5px}
+.n{border-right:#c4c5bf 1px solid;border-top:#c4c5bf 1px solid;border-left:#c4c5bf 1px solid;border-bottom:#c4c5bf 1px solid}
+.dl{font-weight:700;color:#606060}
+.f12{font-size:12px;width:140px}
+.ol{font-weight:700;color:#fff}
+.rs{font-weight:700;color:#ffe400}
+.ds{background-color:#edf2f7}
+.registerlable{color:#0A6FA5;font-weight:700}
+.loginMainTitle{color:#F60;font-size:14px;text-align:left;border-bottom:1px solid #D8D8D8;padding:5px 0 5px 20px}
+#usernamePromptRow,#bottomSpan{height:0}
+.foot{width:100%;border-top:1px solid #D8D8D8;padding-top:6px;font-family:Arial;color:#999;text-align:center}
+.foot p{margin:0px;padding-top:3px;text-align:center;font-family:ËÎÌו;color:#999;font-size:13px}
+.foot p a{text-decoration:none;font-family:ËÎÌו;color:#999;font-size:13px}
+.foot p a:hover{color:#f60;text-decoration:underline}
+.clear{clear:both;}

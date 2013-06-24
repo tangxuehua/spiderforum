@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ControlPanelMaster.master.cs" Inherits="Themes_Default_Masters_ControlPanelMaster" %>
+<%@ Register TagPrefix="ctrl" TagName="ControlPanelNavbar" Src="~/controlpanelthemes/default/controls/Skin-ControlPanelNavbar.ascx" %>
+<%@ Register TagPrefix="ctrl" TagName="TopMenuBar" Src="~/controlpanelthemes/default/controls/Skin-TopMenuBar.ascx" %>
+<%@ Register TagPrefix="ctrl" TagName="Footer" Src="~/controlpanelthemes/default/controls/Skin-Footer.ascx" %>
+
+<%@ Import Namespace="Forum.Business" %>
+<%@ Import Namespace="System.Web.Core" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head id="Head1" runat="server">
+    <title><%= Head.Instance.Title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="Stylesheet" href="<%= Globals.ApplicationPath + "/StaticFiles.ashx?s=ControlPanelDefaultThemeCssFiles&amp;t=text/css&amp;v=001" %>" />
+    <script type="text/javascript" src="<%= Globals.ApplicationPath + "/StaticFiles.ashx?s=GlobalJavaScriptFiles&amp;t=text/javascript&amp;v=001" %>"></script>
+</head>
+<body>
+    <form id="aspnetForm" runat="server">
+        <ctrl:HeadControl runat="server" TitleResourceName="controlpanel" />
+        <div id="Wrap">
+            <asp:ContentPlaceHolder ID="bhcr" runat="server">
+                <ctrl:TopMenuBar runat="server" />
+            </asp:ContentPlaceHolder>
+            <div id="CommonBody">
+                <div id="CommonSidebarLeft">
+                    <asp:ContentPlaceHolder ID="lcr" runat="server">
+                        <ctrl:ControlPanelNavbar runat="server" />
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div id="CommonContent">
+                    <div id="CommonContentInner">
+                        <iframe id="contentFrame" name="contentFrame" width="100%" height="800" scrolling="no" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="CommonFooter">
+                <asp:ContentPlaceHolder ID="fr" runat="server">
+                    <div class="foot">
+                        <div class="fol">
+                            <ctrl:Footer runat="server" />
+                        </div>
+                    </div>
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

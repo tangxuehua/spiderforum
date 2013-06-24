@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ContentMaster.master.cs" Inherits="Themes_Default_Masters_ContentMaster" %>
+<%@Register tagPrefix="ctrl" tagName="TopMenuBar" src="~/themes/default/controls/Skin-TopMenuBar.ascx" %>
+<%@Register tagPrefix="ctrl" tagName="SectionNavbar" src="~/themes/default/controls/Skin-SectionNavbar.ascx" %>
+<%@Register tagPrefix="ctrl" tagName="Footer" src="~/themes/default/controls/Skin-Footer.ascx" %>
+
+<%@ Import Namespace="Forum.Business" %>
+<%@ Import Namespace="System.Web.Core" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server">
+        <title><%= Head.Instance.Title %></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" href="<%= Globals.ApplicationPath + "/favicon.ico" %>">
+        <link rel="icon" type="image/gif" href="<%= Globals.ApplicationPath + "/animated_favicon1.gif" %>">
+        <script type="text/javascript" src="<%= Globals.ApplicationPath + "/StaticFiles.ashx?s=GlobalJavaScriptFiles&amp;t=text/javascript&amp;v=001" %>"></script>
+        <link type="text/css" rel="Stylesheet" href="<%= Globals.ApplicationPath + "/StaticFiles.ashx?s=DefaultThemeCommonCssFiles&amp;t=text/css&amp;v=001" %>" />
+    </head>
+    <body>
+        <form id="aspnetForm" runat="server">
+            <ctrl:HeadControl runat="server" TitleResourceName="PageTitle_Home" />
+            <div class="contentwrap minheight800">
+                <ctrl:TopMenuBar runat="server" />
+                <asp:ContentPlaceHolder id="bcr" runat="server" />
+            </div>
+            <ctrl:Footer runat="server" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ControlPanelIFrameContentMaster.master.cs" Inherits="Themes_Default_Masters_ControlPanelIFrameContentMaster" %>
+
+<%@ Import Namespace="Forum.Business" %>
+<%@ Import Namespace="System.Web.Core" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+<head runat="server">
+    <title><%= Head.Instance.Title %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="Stylesheet" href="<%= Globals.ApplicationPath + "/StaticFiles.ashx?s=ControlPanelDefaultThemeCssFiles&amp;t=text/css&amp;v=001" %>" />
+    <script type="text/javascript" src="<%= Globals.ApplicationPath + "/StaticFiles.ashx?s=GlobalJavaScriptFiles&amp;t=text/javascript&amp;v=001" %>"></script>
+</head>
+<body>
+    <form id="aspnetForm" runat="server">
+        <asp:ContentPlaceHolder ID="bcr" runat="server" />
+    </form>
+</body>
+
+<script type="text/javascript">
+
+function setParentFrame() {
+    setIFrameHeight(parent.document.getElementById("contentFrame"));
+}
+
+if (window.attachEvent) {
+    window.attachEvent("onload", setParentFrame);
+}
+else if (window.addEventListener) {
+    window.addEventListener('load', setParentFrame, false);
+}
+
+</script>
+
+</html>

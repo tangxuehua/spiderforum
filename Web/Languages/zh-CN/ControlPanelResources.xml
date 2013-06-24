@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- common name -->
+  <resource name="Home">网站首页</resource>
+  <resource name="Add">新增</resource>
+  <resource name="Update">更新</resource>
+  <resource name="Rename">改名</resource>
+  <resource name="Delete">删除</resource>
+  <resource name="Save">确定</resource>
+  <resource name="Close">关闭</resource>
+  <resource name="Back">返回</resource>
+  <resource name="Remove">删除</resource>
+  <resource name="Reset">重置</resource>
+  <resource name="Search">搜索</resource>
+  <resource name="Create">创建</resource>
+  <resource name="Edit">编辑</resource>
+  <resource name="View">察看</resource>
+  <resource name="Yes">是</resource>
+  <resource name="No">否</resource>
+  <resource name="Actions">动作</resource>
+  <resource name="None">空</resource>
+  <resource name="Remove">删除</resource>
+  <resource name="Send">发送</resource>
+  <resource name="Submit">发表</resource>
+  <resource name="Select">选择</resource>
+  <resource name="settings">设置</resource>
+  <resource name="Id">Id</resource>
+  <resource name="Name">名字</resource>
+  <resource name="Description">描述</resource>
+  <resource name="RequireCharacter">*</resource>
+
+  <resource name="SaveAvatar">保存头像</resource>
+  <resource name="DeleteAvatar">删除头像</resource>
+  <resource name="EditAvatar_Title">修改头像</resource>
+  <resource name="EditProfile_Title">修改资料</resource>
+  <resource name="EditProfile_UploadAvatar">上传头像</resource>
+  <resource name="EditProfile_NickName">用户昵称</resource>
+
+  <resource name="System_ControlPanel_Role_AddControlTitle">添加角色</resource>
+  <resource name="System_ControlPanel_Role_EditControlTitle">更新角色</resource>
+  <resource name="System_ControlPanel_Role_Name">角色名称</resource>
+
+  <!-- controlpanel navigations -->
+  <resource name="BasicNavigation">基本信息</resource>
+  <resource name="Applications_Forum_Navigations_EditProfile">修改资料</resource>
+  <resource name="Applications_Forum_Navigations_EditAvatar">修改头像</resource>
+  <resource name="Applications_Forum_Navigations_ChangePassword">修改密码</resource>
+
+  <resource name="Applications_Forum_Navigations_UserManage">用户管理</resource>
+  <resource name="Applications_Forum_Navigations_UserManage_List">用户列表</resource>
+  
+  <resource name="Applications_Forum_Navigations_RoleManage">角色管理</resource>
+  <resource name="Applications_Forum_Navigations_RoleManage_List">角色列表</resource>
+  <resource name="Applications_Forum_Navigations_RoleManage_Add">添加角色</resource>
+
+  <resource name="Applications_Forum_Navigations_RolePermissionManage">角色授权管理</resource>
+  <resource name="Applications_Forum_Navigations_RolePermissionManage_ModulePermissionManage">模块权限管理</resource>
+  <resource name="Applications_Forum_Navigations_RolePermissionManage_ForumPermissionManage">论坛事务权限管理</resource>
+
+  <resource name="Applications_Forum_Navigations_SystemManage">系统管理</resource>
+  <resource name="Applications_Forum_Navigations_ExceptionLogManage_List">错误日志列表</resource>
+
+  <resource name="Applications_Forum_Navigations_UserThreadManage">我的帖子管理</resource>
+  <resource name="Applications_Forum_Navigations_MyThreadList">我发表的帖子</resource>
+  <resource name="Applications_Forum_Navigations_MyReplyThreadList">我回复的帖子</resource>
+  <resource name="Applications_Forum_Navigations_MyOpenThreadList">我未结的帖子</resource>
+  <resource name="Applications_Forum_Navigations_MyCloseThreadList">我已结的帖子</resource>
+  <resource name="Applications_Forum_Navigations_GroupManage">版块组管理</resource>
+  <resource name="Applications_Forum_Navigations_GroupManage_List">版块组列表</resource>
+  <resource name="Applications_Forum_Navigations_GroupManage_Add">添加版块组</resource>
+  <resource name="Applications_Forum_Navigations_SectionManage">版块管理</resource>
+  <resource name="Applications_Forum_Navigations_SectionManage_List">版块列表</resource>
+  <resource name="Applications_Forum_Navigations_SectionManage_Add">添加版块</resource>
+  <resource name="Applications_Forum_Navigations_PostManage">帖子管理</resource>
+  <resource name="Applications_Forum_Navigations_PostManage_List">帖子列表</resource>
+  <resource name="Applications_Forum_Navigations_PostManage_Add">添加帖子</resource>
+  <!-- end controlpanel navigations -->
+
+  <resource name="System_ControlPanel_ExceptionLog_ViewDetailTitle">错误日志详细信息</resource>
+  <resource name="System_ControlPanel_ExceptionLog_Message">标题：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_ExceptionDetails">详细信息：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_IPAddress">IP地址：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_UserAgent">UserAgent：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_HttpReferrer">HttpReferrer：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_HttpVerb">HttpVerb：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_PathAndQuery">目标地址：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_DateCreated">发生时间：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_DateLastOccurred">最后发生时间：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_Frequency">发生频率：</resource>
+  <resource name="System_ControlPanel_ExceptionLog_UserName">登陆用户：</resource>
+    
+  <resource name="System_ControlPanel_Group_AddControlTitle">添加版块组</resource>
+  <resource name="System_ControlPanel_Group_EditControlTitle">更新版块组</resource>
+  <resource name="System_ControlPanel_Group_Subject">版块组名称</resource>
+  <resource name="System_ControlPanel_Group_Enabled">是否启用</resource>
+
+  <resource name="System_ControlPanel_Section_AddControlTitle">添加版块</resource>
+  <resource name="System_ControlPanel_Section_EditControlTitle">更新版块</resource>
+  <resource name="System_ControlPanel_Section_Subject">版块名称</resource>
+  <resource name="System_ControlPanel_Section_SelectGroup">版块组</resource>
+  <resource name="System_ControlPanel_Section_Enabled">是否启用</resource>
+
+  <resource name="System_ControlPanel_Thread_AddControlTitle">添加帖子</resource>
+  <resource name="System_ControlPanel_Thread_EditControlTitle">更新帖子</resource>
+  <resource name="System_ControlPanel_Thread_Subject">帖子标题</resource>
+  <resource name="System_ControlPanel_Thread_Marks">帖子分数</resource>
+  <resource name="System_ControlPanel_Thread_Body">帖子内容</resource>
+  <resource name="System_ControlPanel_Thread_Tags">Tags</resource>
+  <resource name="System_ControlPanel_Thread_IsRecommended">帖子状态</resource>
+
+  <resource name="System_ControlPanel_Post_AddControlTitle">添加回复</resource>
+  <resource name="System_ControlPanel_Post_EditControlTitle">更新回复</resource>
+  <resource name="System_ControlPanel_Post_Body">回复内容</resource>
+
+  <resource name="System_ControlPanel_Section_CreateTestThreads_Title">生成测试帖子</resource>
+  <resource name="System_ControlPanel_Section_CreateTestThreads_Subject">帖子标题</resource>
+  <resource name="System_ControlPanel_Section_CreateTestThreads_Count">帖子个数</resource>
+
+  <!-- ChangePassword -->
+  <resource name="ChangePassword_Title">修改密码</resource>
+  <resource name="ChangePassword_UserName">用户名</resource>
+  <resource name="ChangePassword_OldPassword">旧密码</resource>
+  <resource name="ChangePassword_NewPassword">新密码</resource>
+  <resource name="ChangePassword_NewPasswordConfirm">新密码确认</resource>
+
+  <!-- UserRoles -->
+  <resource name="System_ControlPanel_UserRoles_ManageTitle">用户角色管理</resource>
+  <resource name="System_ControlPanel_UserRoles_RoleList">角色列表</resource>
+
+  <!-- SectionAdmins -->
+  <resource name="System_ControlPanel_SectionAdmins_ManageTitle">版主管理</resource>
+  <resource name="System_ControlPanel_SectionAdmins_UserList">版主列表</resource>
+</root>

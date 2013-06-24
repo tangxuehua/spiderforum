@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- common name -->
+  <resource name="Home">首页</resource>
+  <resource name="Register">注册</resource>
+  <resource name="Login">登陆</resource>
+  <resource name="Logout">注销</resource>
+  <resource name="ControlPanel">我的帐户</resource>
+  <resource name="Add">新增</resource>
+  <resource name="Update">更新</resource>
+  <resource name="Rename">改名</resource>
+  <resource name="Delete">删除</resource>
+  <resource name="Save">确定</resource>
+  <resource name="Close">关闭</resource>
+  <resource name="Back">返回</resource>
+  <resource name="Remove">删除</resource>
+  <resource name="Reset">重置</resource>
+  <resource name="Search">搜索</resource>
+  <resource name="Create">创建</resource>
+  <resource name="Edit">编辑</resource>
+  <resource name="View">察看</resource>
+  <resource name="Yes">是</resource>
+  <resource name="No">否</resource>
+  <resource name="Actions">动作</resource>
+  <resource name="None">空</resource>
+  <resource name="Remove">删除</resource>
+  <resource name="Send">发送</resource>
+  <resource name="Submit">发表</resource>
+  <resource name="Select">选择</resource>
+  <resource name="settings">设置</resource>
+  <resource name="Id">Id</resource>
+  <resource name="Name">名字</resource>
+  <resource name="Description">描述</resource>
+  <resource name="SaveThread">发表帖子</resource>
+  <resource name="SaveReply">发表回复</resource>
+  <!-- page utility -->
+  <resource name="Utility_CurrentPage_text">当前第 {0} 页   共 {1} 页(共{2}条记录)</resource>
+  <resource name="Utility_Pager_previousButton">&lt; 上一页</resource>
+  <resource name="Utility_Pager_nextButton">下一页 &gt;</resource>
+  <resource name="Utility_Pager_firstButton">« 首页</resource>
+  <resource name="Utility_Pager_lastButton">末页 »</resource>
+
+  <!-- Page Title -->
+  <resource name="PageTitle_Home">蜘蛛侠论坛</resource>
+  <resource name="PageTitle_NewThread">蜘蛛侠论坛 发表帖子</resource>
+  <resource name="PageTitle_CloseThread">蜘蛛侠论坛 结帖页面</resource>
+  <resource name="PageTitle_ThreadDetail">蜘蛛侠论坛 查看帖子详细信息</resource>
+  <resource name="PageTitle_Login">登录蜘蛛侠论坛通行证</resource>
+  <resource name="PageTitle_Register">注册蜘蛛侠论坛通行证</resource>
+
+  <!-- Skin-Login.ascx -->
+  <resource name="Login_UserName">帐号</resource>
+  <resource name="Login_Password">密码</resource>
+
+  <!-- Skin-Register.ascx -->
+  <resource name="Register_Title">用户登录</resource>
+  <resource name="Register_UserName">用户名：</resource>
+  <resource name="Register_NickName">昵 称：</resource>
+  <resource name="Register_Password">密 码：</resource>
+  <resource name="Register_ConfirmPassword">密码确认：</resource>
+  <resource name="Register_AuthCode">验证码：</resource>
+  <resource name="Register_SubmitButton">确 定</resource>
+
+</root>

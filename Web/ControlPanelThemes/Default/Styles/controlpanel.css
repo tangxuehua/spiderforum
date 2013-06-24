@@ -1,0 +1,187 @@
+*{margin:0;padding:0}
+body,p,th,td,input,select,textarea{font-size:12px;color:#111;word-wrap:break-word;word-break:break-all}
+body{text-align:center;background-color:#FFF;margin:0;padding:0 10px}
+table{text-align:left;table-layout:fixed}
+hr{border:#000 0 solid;border-top:#D1D7DC 1px solid;height:0}
+img{border:0}
+a{color:#0840B2;text-decoration:none}
+a:hover{color:#333;text-decoration:underline}
+#Wrap{width:950px;max-width:950px;min-width:740px;overflow:hidden;text-align:left;margin:0 auto}
+#CommonBody{clear:both;margin-top:5px}
+#CommonFooter{border-top:solid 5px #C7CDD8;height:30px;clear:both;text-align:center;margin:0 auto;padding:5px 0 0}
+#CommonContent{width:782px;min-height:600px;margin:0 0 0 168px;padding:0 0 10px}
+* html #CommonContent{width:778px;height:600px;margin:0 0 0 168px;padding:0 0 10px}
+#commonHeader{background:#f1f4f6;overflow:hidden;zoom:1;border-left:solid #dbe2e8 1px;border-right:solid #dbe2e8 1px;padding:0 0 6px}
+#commonContent{padding:0 0 6px}
+.containerLeft{width:168px;overflow:hidden}
+.containerLeftInner{margin-right:0}
+.containerCenter{width:810px;overflow:hidden}
+.commonContentArea{background:#fff;text-align:left}
+.commonTopPanel{overflow:hidden;zoom:1;background:url(img.ashx?fileurl=images/grd-1px_1.4.gif) repeat-x 0 -1036px;border-left:solid #dbe2e8 1px;border-right:solid #dbe2e8 1px;padding:3px}
+.siteMenu{float:right;width:65%}
+.topbarUserInfoLink{display:inline-block;padding-left:6px;padding-right:2px}
+.topbarUseRunwrap{padding-right:9px}
+.topbarMenuSiteInfo{float:right;padding-top:3px}
+.chromestyle ul li{display:inline}
+.chromestyle:after{content:".";display:block;height:0;visibility:hidden}
+.chromestyleUser{float:right;margin-right:30px}
+.dropmenudiv{position:absolute;top:0;border:1px solid #83abe9;z-index:100;background-color:#fff;width:100px;visibility:hidden;padding:10px 10px 0}
+.dropmenudiv a{display:block;padding-bottom:10px}
+.pageNav{display:block;width:525px;text-align:right;float:right;white-space:nowrap;background:url(img.ashx?fileurl=images/srh_bg.png) no-repeat 0 12px!important;padding:25px 50px 5px}
+.pageNav li{display:block;float:left;white-space:nowrap;overflow:hidden}
+.pageNav li a{display:block;font-size:14px;text-align:center;text-decoration:none;white-space:nowrap;background:url(img.ashx?fileurl=images/lne.gif) no-repeat right center;padding:10px}
+.pageNav li a:hover{color:#039;text-decoration:underline}
+.pageNav li a.navLast{background:none}
+.navbarcontainer{width:165px;height:100%}
+.expand{background:url(img.ashx?fileurl=images/left-bt-bg-expand.gif) no-repeat}
+.collapse{background:url(img.ashx?fileurl=images/left-bt-bg.gif) no-repeat}
+.show{display:block}
+.title{height:22px;font-size:1.1em;padding-left:15px;padding-top:6px;cursor:pointer;color:#444}
+.subtab{font-size:1em;color:#03A3F3;padding-top:0;padding-left:0;margin:0}
+.subtab li .item{padding-left:15px;background-position:5px 5px}
+a.normal,a.normal:link,a.normal:visited,a.normal:active{font-size:1em;text-decoration:none;padding-top:0;padding-left:3px;color:#09F}
+a.normal:hover{font-size:1em;text-decoration:underline;color:red;padding-left:3px}
+a.active{font-size:1em;color:red;text-decoration:underline;padding-left:3px}
+.foot p{line-height:24px;text-align:center;font-family:ËÎÌו;color:#999;font-size:13px}
+.foot p a{text-decoration:none;font-family:ËÎÌו;color:#999;font-size:13px}
+.foot p a:hover{color:#f60;text-decoration:underline}
+.ThubnailImage{float:right;width:27%;position:relative}
+.ThubnailImage img{position:absolute;right:3px;top:15px}
+.FormRow{margin-top:15px;width:100%;overflow:hidden}
+.AdminTable{border:none;width:100%;table-layout:fixed;margin:5px auto 0}
+.AdminTable thead{background:#eee;line-height:25px;text-align:center}
+.AdminTable tbody td{display:table-cell;height:40px;border-top:1px dotted #fff;border-bottom:1px dotted #ccc}
+.AdminTable tbody tr.HighLight{background:#ffffcd}
+.AdminArea .LargerFieldNameRequireCharacter{display:block;float:left;width:7em;text-align:right;font-size:14px;padding:.5em}
+.RedColor{color:Red}
+.TitleCol{width:45%;text-align:left}
+.TitleCol A,.TitleCol A:link,.TitleCol A:visited,.TitleCol A:hover,.TitleCol A:active{color:#0840B2}
+.PhotoTitleCol{width:60%;text-align:left;padding-left:10px}
+.FriendNameCol{width:8%;text-align:left}
+.SpecificationNameCol{width:20%;text-align:left}
+.SpecificationUnitCol{width:50%;text-align:left}
+.CompanyNameCol{width:40%;text-align:left}
+.TimeCol{width:15%;white-space:nowrap;text-align:center}
+.CategoryCol{width:13%;text-align:center}
+.BigActionCol{width:24%;text-align:center}
+.PhotoActionCol{width:20%;text-align:center}
+.RoleNameCol{width:15%;text-align:left}
+a.AdminIcon{text-decoration:none!important;padding:5px 0}
+a.AdminIcon span{visibility:hidden}
+a.GoEdit{background:url(img.ashx?fileurl=images/pencil.gif) no-repeat center center}
+a.GoDelete{background:url(img.ashx?fileurl=images/cross.gif) no-repeat center center}
+#pagingWrapper{margin-top:10px;margin-bottom:6px;clear:both;text-align:right}
+fieldset{border:1px solid #CCC;width:100%;height:100%}
+fieldset legend{font:normal 20px SimHei;margin-left:10px;color:#111;padding:2px}
+.AdminArea{text-align:left;margin:0 auto;padding:0}
+.AdminArea .FileSmallWidth{width:260px;font-size:1.2em;height:25px;padding:3px}
+.AdminArea .FileWidth{width:300px;font-size:1.2em;height:25px;padding:3px}
+.AdminArea .AvatarFileWidth{width:400px;font-size:1.2em;height:25px;padding:3px}
+.AdminArea .avatorRowLeft{padding-top:30px}
+.AdminArea .avatorRowRight{padding-top:40px}
+.AdminArea .EditAvatar_SaveButtonRow{text-align:right;margin-top:30px;margin-right:24px}
+.AdminArea .EditAvatar_SaveButtonRow .Button{padding:3px 6px 0}
+.AdminArea .FormSmallRow{margin-top:15px;width:75%;overflow:hidden;float:left}
+.AdminArea .FormRow{margin-top:5px;width:100%;overflow:hidden;float:left}
+.AdminArea .SubmitButtonRow{margin-bottom:20px;text-align:center}
+.AdminArea .SubmitButtonRow .Button{padding:5px 10px}
+.AdminArea .FormRow .CheckBox{display:block;float:left;width:3em;text-align:left;font-size:12px;padding:.5em 0}
+* html .AdminArea .FormRow .CheckBox{display:block;float:left;width:3em;text-align:left;font-size:12px;padding:.2em 0}
+.AdminArea .SubmitButtonRow1{margin-bottom:20px;text-align:left}
+.AdminArea .Username{display:block;float:left;width:10em;text-align:left;font-size:12px;padding:.5em}
+.AdminArea .StaticText{display:block;float:left;text-align:right;font-size:12px;padding:.5em 1em}
+.AdminArea .CheckboxList label{text-align:left;font-size:12px;padding:.5em 1em}
+.AdminArea table.CheckboxList{height:25px}
+.productname{display:inline-block;width:2em;text-align:left;font-size:13px;padding:.5em 0 .5em 2em}
+.productunit{display:inline-block;width:20em;text-align:left;font-size:12px;padding:.5em 1em}
+#UserRoles table{margin:0 auto}
+#UserControlPanelNavigationBar{background-color:#FC6;margin:5px;padding:5px}
+#UserControlPanelNavigationBar a{padding:5px}
+.UserSearchArea{border:0 solid #CCC;margin-bottom:10px;padding:4px}
+.TopArea{border:solid 0 #CCC;margin-bottom:0;margin-left:0;margin-right:0;text-align:right;padding:0}
+* html .AdminArea .AvatarFileUpload{width:400px;font-size:1.2em;height:25px;border:solid 1px #ccc;padding:3px}
+.PrefixCol{width:3%;text-align:center}
+.Jing{background:url(img.ashx?fileurl=images/jing.gif) no-repeat center}
+.Ding{background:url(img.ashx?fileurl=images/ding1.gif) no-repeat center}
+.Jian{background:url(img.ashx?fileurl=images/jian.gif) no-repeat center}
+.List{background:url(img.ashx?fileurl=images/listinfo.gif) no-repeat center}
+.nonedisplay{clear:both;display:none;visibility:hidden}
+.head090114{width:100%;height:62px;background:#fff url(img.ashx?fileurl=images/bgtop.gif) top repeat-x;border-bottom:1px solid #EBEBEB;margin:0 auto}
+.head090114:after{content:".";clear:both;height:0;visibility:hidden}
+.head090114 p.logo{padding-left:20px;float:left}
+.rInfo{width:300px;text-align:right;float:right}
+.rInfo p{color:#999;font-size:13px;line-height:100%;padding:6px}
+.rInfo p a{font-size:13px;color:#999;text-decoration:none}
+.rInfo p a:hover{font-size:13px;color:#999;text-decoration:underline}
+.rInfo p span a{font-size:13px;color:green;text-decoration:none}
+.rInfo p span a:hover{font-size:13px;color:green;text-decoration:underline}
+.rInfo p font a{color:#F60;font-size:13px;line-height:100%;padding:6px}
+.rInfo p font a:hover{color:#F60;font-size:13px;line-height:100%;text-decoration:underline;padding:6px}
+.rInfo p a strong{color:#c00;font-size:14px}
+.rInfo p font b a{color:#999;font-size:13px;line-height:100%;font-weight:400;padding:6px}
+.rInfo p font b a:hover{color:#999;font-size:13px;line-height:100%;text-decoration:underline;font-weight:400;padding:6px}
+.Pecent90Width{width:90%}
+.Pecent80Width{width:80%}
+.Pecent70Width{width:70%}
+.Pecent60Width{width:60%}
+.Pecent40Width{width:40%}
+.Pecent30Width{width:30%}
+.Pecent20Width{width:20%}
+.Pecent95Width{width:95%}
+.Pecent85Width{width:85%}
+.Pecent65Width{width:65%}
+.Pecent55Width{width:55%}
+.Pecent45Width{width:45%}
+.Pecent35Width{width:35%}
+.Pecent15Width{width:15%}
+.Pecent7Width{width:7%}
+.Pecent5Width{width:5%}
+p,.navbar{margin:0;padding:0}
+#CommonContentInner,* html .dropmenudiv a{width:100%}
+#CommonSidebarLeft,#commonLeftColumn,.siteLogo{float:left}
+.CommonSideBarLeftWidth,.CommonSideBarRightWidth{width:188px}
+#CommonSidebarRight,#commonCenterColumn,.topbarMenuUserInfoAt{float:right}
+.clear,.topbarMenuUserInfo{clear:both}
+.topbarMenuOn,.topbarMenuOff,.hide{display:none}
+.subtab li.lastItemContainer,.subtab li.itemContainer{list-style-type:none;margin-left:10px;padding-left:0;margin-top:4px;padding-bottom:0;height:21px;background-position:0 -5px}
+.ButtonRow,.AdminArea .ButtonRow{margin-bottom:20px}
+.NumCol,.EnabledCol,.PermissionCol{width:8%;text-align:center}
+.DateLastOccurred{width:18%;text-align:center}
+.ThubnailCol,.IsApprovedCol,.ActionCol{width:12%;text-align:center}
+.OrderNumberCol,.IsRecommendedCol,.MarksCol,.CountCol,.CompanyNumberCol{width:10%;text-align:center}
+.IsApprovedCol1,.OrderNumberCol1{width:6%;text-align:center}
+.ProductTitleCol,.FriendUrlCol{width:30%;text-align:left}
+.ProductTitleCol A,.ProductTitleCol A:link,.ProductTitleCol A:visited,.ProductTitleCol A:hover,.ProductTitleCol A:active,.PhotoTitleCol A,.PhotoTitleCol A:link,.PhotoTitleCol A:visited,.PhotoTitleCol A:hover,.PhotoTitleCol A:active,.CompanyNumberCol A,.CompanyNumberCol A:link,.CompanyNumberCol A:visited,.CompanyNumberCol A:hover,.CompanyNumberCol A:active,.FriendNameCol A,.FriendNameCol A:link,.FriendNameCol A:visited,.FriendNameCol A:hover,.FriendNameCol A:active,.FriendUrlCol A,.FriendUrlCol A:link,.FriendUrlCol A:visited,.FriendUrlCol A:hover,.FriendUrlCol A:active,.ReplyCol A,.ReplyCol A:link,.ReplyCol A:visited,.ReplyCol A:hover,.ReplyCol A:active{color:#A3F}
+.ReplyCol,.FrequencyCol{width:7%;text-align:center}
+.AdminArea .AvatarUploadLabel,.AdminArea input,.AdminArea select{font-size:14px}
+.AdminArea .FormRow .File,.AdminArea .InputField,.UserSearchArea .InputField{border:1px solid #CCC;padding:4px}
+.AdminArea .SubmitButtonRow1 .Button,.UserSearchArea .SearchButton{padding:2px 4px}
+.AdminArea .FieldName,.AdminArea .LargerFieldName,#CreateAccount .FieldName{display:block;float:left;width:6em;text-align:right;font-size:12px;padding:.5em 1em}
+.AdminArea .LargerWidth,.Pecent75Width{width:75%}
+.AdminArea .MiddleWidth,.Pecent50Width{width:50%}
+.AdminArea .SmallWidth,.Pecent25Width{width:25%}
+.AdminArea .MicroWidth,.Pecent10Width{width:10%}
+
+.contentwrap{width:950px;background:#F3F3F3;text-align:left;margin:0 auto}
+.minheight800{height:auto !important;height:800px;min-height:800px;overflow:visible;}
+.minheight500{height:auto !important;height:500px;min-height:500px;overflow:visible;}
+.head090114{width:100%;height:62px;background:#fff url(img.ashx?fileurl=images/bgtop.gif) top repeat-x;border-bottom:1px solid #EBEBEB;margin:0 auto}
+.head090114: after{content:".";clear:both;height:0;visibility:hidden}
+.head090114 p.logo{padding-left:20px;float:left}
+.rInfo{width:300px;text-align:right;float:right}
+.rInfo p{color:#999;font-size:13px;line-height:100%;padding:6px}
+.rInfo p a{font-size:13px;color:#999;text-decoration:none}
+.rInfo p a:hover{font-size:13px;color:#999;text-decoration:underline}
+.rInfo p span a{font-size:13px;color:green;text-decoration:none}
+.rInfo p span a:hover{font-size:13px;color:green;text-decoration:underline}
+.rInfo p font a{color:#F60;font-size:13px;line-height:100%;padding:6px}
+.rInfo p font a:hover{color:#F60;font-size:13px;line-height:100%;text-decoration:underline;padding:6px}
+.rInfo p a strong{color:#c00;font-size:14px}
+.rInfo p font b a{color:#999;font-size:13px;line-height:100%;font-weight:400;padding:6px}
+.rInfo p font b a:hover{color:#999;font-size:13px;line-height:100%;text-decoration:underline;font-weight:400;padding:6px}
+.ViewExceptionLogForm{text-align:left;margin:0 auto;padding:20px 0 0}
+.ViewExceptionLogForm .FormRow{margin-top:5px;width:100%;overflow:hidden;float:left}
+.ViewExceptionLogForm .FieldName{display:block;float:left;width:14%;text-align:right;font-size:12px;padding:5px 0}
+.ViewExceptionLogForm .StaticText{display:block;float:right;width:84%;text-align:left;font-size:12px;padding:5px 10px 5px 5px}
+.ViewExceptionLogForm .SubmitButtonRow{margin-bottom:20px;text-align:center}
+.ViewExceptionLogForm .SubmitButtonRow .Button{padding:5px 10px}

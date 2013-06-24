@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TabCollection>
+    <Tabs>
+        <Tab resourcename="BasicNavigation" isexpand="true">
+            <SubTabs>
+                <Tab resourcename="Home" urlname="home" />
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_EditProfile" urlname="editprofile" />
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_ChangePassword" urlname="changepassword" />
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_EditAvatar" urlname="editavatar" />
+            </SubTabs>
+        </Tab>
+        <Tab resourcename="Applications_Forum_Navigations_UserThreadManage" isexpand="true">
+            <SubTabs>
+                <Tab target="contentFrame" parametersProvider="System.Web.Core.UserIdProvider, System.Web.Core" resourcename="Applications_Forum_Navigations_MyThreadList" urlname="mythreadlist" />
+                <Tab target="contentFrame" parametersProvider="System.Web.Core.UserIdProvider, System.Web.Core" resourcename="Applications_Forum_Navigations_MyReplyThreadList" urlname="myreplythreadlist" />
+            </SubTabs>
+        </Tab>
+        <Tab resourcename="Applications_Forum_Navigations_UserManage" isexpand="true" permissions="100">
+            <SubTabs>
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_UserManage_List" urlname="user_list" />
+            </SubTabs>
+        </Tab>
+        <Tab resourcename="Applications_Forum_Navigations_RoleManage" isexpand="true" permissions="200">
+            <SubTabs>
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_RoleManage_List" urlname="role_list" />
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_RoleManage_Add" urlname="role_add" />
+            </SubTabs>
+        </Tab>
+        <Tab resourcename="Applications_Forum_Navigations_RolePermissionManage" isexpand="true" permissions="400">
+            <SubTabs>
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_RolePermissionManage_ModulePermissionManage" urlname="modulepermissionmanage" />
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_RolePermissionManage_ForumPermissionManage" urlname="forumpermissionmanage" />
+            </SubTabs>
+        </Tab>
+        <Tab resourcename="Applications_Forum_Navigations_SectionManage" isexpand="true" permissions="800">
+            <SubTabs>
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_GroupManage_List" urlname="group_list" />
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_GroupManage_Add" urlname="group_add" />
+                <Tab target="contentFrame" parameters="0" resourcename="Applications_Forum_Navigations_SectionManage_List" urlname="section_list" />
+                <Tab target="contentFrame" parameters="0" resourcename="Applications_Forum_Navigations_SectionManage_Add" urlname="section_add" />
+            </SubTabs>
+        </Tab>
+        <Tab resourcename="Applications_Forum_Navigations_SystemManage" isexpand="true" permissions="4000">
+            <SubTabs>
+                <Tab target="contentFrame" resourcename="Applications_Forum_Navigations_ExceptionLogManage_List" urlname="exceptionlog_list" />
+            </SubTabs>
+        </Tab>
+    </Tabs>
+</TabCollection>

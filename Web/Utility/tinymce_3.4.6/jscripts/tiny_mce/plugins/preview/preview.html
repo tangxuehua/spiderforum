@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+<script type="text/javascript" src="jscripts/embed.js"></script>
+<script type="text/javascript" src="../../../../../jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushCSharp.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushSql.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushPerl.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushJava.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushJavaFX.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushGroovy.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushErlang.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushDiff.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushDelphi.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushCpp.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushColdFusion.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushBash.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushAS3.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushAppleScript.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushPython.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushRuby.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushSass.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushScala.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shBrushVb.js"></script>
+<script type="text/javascript" src="../../../../../syntaxhighlighter_3.0.83/scripts/shLegacy.js"></script>
+<link href="../../../../../syntaxhighlighter_3.0.83/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../syntaxhighlighter_3.0.83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+<!--
+document.write('<base href="' + tinyMCEPopup.getWindowArg("base") + '">');
+// -->
+</script>
+<title>{#preview.preview_desc}</title>
+</head>
+<body id="content">
+
+<script type="text/javascript">
+	document.write(tinyMCEPopup.editor.getContent());
+    SyntaxHighlighter.all();
+    function addEvent(obj, type, fn) {
+        if (obj.addEventListener) {
+            obj.addEventListener(type, fn, false);
+        }
+        else if (obj.attachEvent) {
+            obj.attachEvent("on" + type, fn);
+        }
+        else {
+            obj["on" + type] = fn;
+        }
+    }
+    addEvent(window, "load", hideToolbars);
+    function hideToolbars() {
+        $("div.toolbar").css("display","none");
+    }
+</script>
+</body>
+</html>
