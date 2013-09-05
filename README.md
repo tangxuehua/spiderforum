@@ -1,4 +1,4 @@
 spiderforum
 ===========
 
-a simple forum.
+a simple forum!
